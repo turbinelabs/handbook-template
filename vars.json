@@ -1,0 +1,39 @@
+{
+  "company_name": "Clef",
+  "company_full_name": "Clef, Inc.",
+  "company_full_name_upper": "CLEF, INC.",
+  "company_domain": "getclef.com",
+
+  "handbook_url": "getclef.com/handbook",
+  "handbook_github_repo": "https://github.com/clef/handbook",
+  "handbook_github_repo_text": "github.com/clef/handbook",
+  "handbook_changes_receipt_url": "https://github.com/clef/handbook/blob/master/Hiring%20Documents/Acknowledgment%20of%20Receipt%20of%20Changes.md",
+  "handbook_receipt_url": "https://github.com/clef/handbook/blob/master/Hiring%20Documents/Acknowledgment%20of%20Receipt.md",
+
+  "ceo_name": "B",
+  "ceo_long_name": "B Byrne",
+  "ceo_twitter_handle": "brennenbyrne",
+  "ceo_email": "b@getclef.com",
+  "founders": "Mark, Jesse, or B",
+
+  "salary_more_than_5_technical": "$120k",
+  "salary_less_than_5_technical": "$100k",
+  "salary_more_than_5_nontechnical": "$100k",
+  "salary_less_than_5_nontechnical": "$70k",
+  "salary_slide_down": "$5k",
+
+  "equity_slide_up": "~.1%",
+  "salary_founders": "$50k",
+  "equity_vest_years": "six",
+  "equity_vest_cliff": "one year",
+  "equity_outstanding_shares": "4,662,658",
+  "equity_409A_url": "https://drive.google.com/open?id=0Bwj0rVaUQUXPaXREcklsZ0xuNTA",
+
+  "first_day_doc_url": "https://docs.google.com/document/d/1vvJfWH7lP808mAlKPr8JwUx0HvkiidzS_bkwB8wqA7M",
+  "first_day_doc_url": "https://docs.google.com/document/d/1vvJfWH7lP808mAlKPr8JwUx0HvkiidzS_bkwB8wqA7M",
+  "offer_letter_docs_url": "https://docs.google.com/document/d/1WUiY-mzKHJblc6MatcyZcqWqdnhe_D4fl0RvFXR7dz0",
+  "proprietary_information_docs_url": "https://docs.google.com/document/d/10RI3ne-OLjU8cwuwVuYA3H_pQdEW1pioz1zIAJ3nOLY",
+  "one_on_ones_docs_url": "https://docs.google.com/open?authuser=b%40getclef.com&id=1yVp1XzfjmHkwf_vQf-COInCHj2xd3b7ne_77YSleRgc",
+  "okrs_docs_url": "https://docs.google.com/open?authuser=b%40getclef.com&id=1ZpDWejQiU5gDWz2mFPvOhdf1g2Xc6vu1kdrlCp3SimU",
+  "handbook_docs_url": "https://drive.google.com/open?id=0Bwj0rVaUQUXPNWI3SmlwMXRkTDQ&authuser=0"
+}

@@ -1,86 +1,57 @@
-# Our Handbook
+# Handbook Generator
 
-At Clef, we’re working to build an inclusive company with a value-driven culture. That’s an easy thing to want and say, but it’s difficult to practice because exclusion is the default in our industry. It takes active effort to find the hidden biases in our companies and remove them.
+This tool is designed to templatize the Clef employee handbook, allowing other companies to use it as a reasonable starting point without excessive amounts of s/Clef/company name/. The goals in development were to
 
-As we started growing our team this year, we looked for a starter-kit of inclusive policies. A lot of great work is being done to discuss cultural problems and their solutions, but it’s coming from a lot of different voices around the web and very little is written in the form of policy.
+* enable a smooth migration of the template system back into the Clef handbook github repo
+* allow other companies to easily adopt the current Clef handbook "as is"
+* allow other companies to easily merge changes as they are made to the Clef handbook
+* allow other companies to easily replace sections of the handbook as they desire
 
-We wanted to put what we've learned into practice, so we decided to write our own handbook and open source it.
+# Basic usage
 
-This repository contains all of the policies that we use at Clef. It represents many hours of research, lots of thoughtful debates, and some serious introspection. It’s certainly not perfect, but we think it’s an exciting place to start.
+This assumes you have the go compiler and tools installed. See https://golang.org/doc/install#install for instructions. From this directory, you should be able to run `go run generator.go`. This should effectively re-create the Clef handbook in the a directory named "out". Running `go run generate.go --help` will provide a description of all command line arguments available.
 
-Feel free to fork this repository and use any or all of these policies, and to modify them in whatever way makes sense for your company. We hope that by publishing them, other companies can benefit from our research and make their own policies more inclusive.
+# Customizing the handbook
 
-All feedback and suggestions (especially in the form of pull requests) are very appreciated. We’ve gotten several different perspectives to help arrive at these policies, but we are certainly missing many more and making mistakes as a result. This is a work in progress that we hope will get better with more time and more contributors.
+Customization is done via two mechanisms - overrides and vars. Vars are held (by default) in the vars.json file. Vars are interpolated into the handbook templates, held in the root of this git repository. Editing the vars file and re-running the generator will create a modified handobok in the out directory. Modifying vars is useful for changes like company name, founder emails, etc.
 
-If these policies sound like a place where you want to work, check out our jobs postings at [getclef.com/about](https://getclef.com/about).
+Overrides allow forks to replace sections of the handbook entirely while still easily tracking changes from an upstream. When selecting a template, the generator walks the directory specified by the `-template-dir` flag (by default templates). When it encounters a file, it looks for a matching file in overrides. If such a file exists, it uses the override as the template. For instance when the generator encounters `templates/Employment Policies/Salary and Equity Compensation.md`, it will look for `overrides/Employment Policies/Salary and Equity Compensation.md`. If the override file is found it will be used as the template for that page in the generated handbook.
 
-— [B](https://twitter.com/brennenbyrne)
+# Suggested Usage
 
-CEO of Clef
+## Managing Updates
 
-***
+The Clef handbook is a living document, and changes have been made fairly rapidly. We don't want to stifle that rapid evolution, but we would like to make it possible for more people to share in the benefits. Our suggested workflow is to have two repositories - a handbook-template and an actual handbook. The handbook-template repository wouldbe shared between multiple companies, and treated much more like a standard open source project than the current purely textual Clef handbook. Multiple companies could collaborate here, share changes, and manage forks to adapt the handbook to their specific needs. When the handbook-template is ready for publishing, the generator is run and output is written to the actual handbook repository. As an example
 
+```
+*company forks clef/handbook-template*
+*company creates <company>/handbook repo*
+git clone git@github.com:<company>/handbook-template.git
+git clone git@github.com:<company>/handbook.git
+cd handbook-template
+go run generator.go -out ../handbook
+cd ../handbook
+git commit -am "initial commit" && git push origin master
+*make edits to handbook-template*
+*pull changes from clef/handbook-template*
+cd handbook-template
+go run generator.go -out ../handbook
+cd ../handbook
+git commit -am "updates" && git push origin master
+```
 
-## Introduction
-* [Mission Statement](https://github.com/clef/handbook/blob/master/Mission%20Statement.md)
-* [Clef Values](https://github.com/clef/handbook/blob/master/Clef%20Values.md)
+## Probable Overrides
 
-## Employment Policies
-* [Equal Opportunity Employment](https://github.com/clef/handbook/blob/master/Employment%20Policies/Equal%20Opportunity%20Employment.md)
-* [At-Will Employment](https://github.com/clef/handbook/blob/master/Employment%20Policies/At-Will%20Employment.md)
-* [Salary and Equity Compensation](https://github.com/clef/handbook/blob/master/Employment%20Policies/Salary%20and%20Equity%20Compensation.md)
-* [Code of Conduct in the Community](https://github.com/clef/handbook/blob/master/Employment%20Policies/Code%20of%20Conduct%20in%20the%20Community.md)
-* [Complaint Policy](https://github.com/clef/handbook/blob/master/Employment%20Policies/Complaint%20Policy.md)
-* [Drug and Alcohol Policy](https://github.com/clef/handbook/blob/master/Employment%20Policies/Drug%20and%20Alcohol%20Policy.md)
-* [Employee Privacy](https://github.com/clef/handbook/blob/master/Employment%20Policies/Employee%20Privacy.md)
-* [Working Remotely](https://github.com/clef/handbook/blob/master/Employment%20Policies/Working%20Remotely.md)
+The following areas will probably see fairly wide divergence across companies. This list may seem daunting, but the override process is straightforward. Copy templates you want to change to the overrides file, make your changes, and regenerate your handbook.
 
-## Hiring Documents
-* [Acknowledgement of Receipt](https://github.com/clef/handbook/blob/master/Hiring%20Documents/Acknowledgment%20of%20Receipt.md)
-* [Clef Offer Letter](https://github.com/clef/handbook/blob/master/Hiring%20Documents/Clef%20Offer%20Letter.md)
-* [Employee Proprietary Information and Inventions Agreement](https://github.com/clef/handbook/blob/master/Hiring%20Documents/Employee%20Proprietary%20Information%20and%20Inventions%20Assignment%20Agreement.md)
-* [Guide to Your Equity](https://github.com/clef/handbook/blob/master/Hiring%20Documents/Guide%20to%20Your%20Equity.md)
-* [Handbook Introduction](https://github.com/clef/handbook/blob/master/Hiring%20Documents/Handbook%20Introduction.md)
+* Policy Changes.md - a very detailed list of change policies, but once again Clef specific. A good starting point, but you'll want to override
+* Values.md - these are clef values. You should have your own!
+* Benefits and Perks/Healthcare and Disability Insurance.md - companies are almost certain to have different providers and levels of healthcare. You'll probabyl want to override this file
+* Employment Policies/Working Remotely.md - a hot topic, if you support remote work you'll want to override this file as well.
+* Hiring Documents/Guide to Your Equity.md - this contains some fairly Clef-specific language, and will likely be an override a well.
+* Onboarding Documents/Product Manifesto.md - this is entirely Clef-specific. Make your own manifesto!
+* Onboarding Documents/Welcome.md - also contains some fairly Clef-specific language.
+* Operations Documents/Onboarding.md - Slack and Trello are common but probably not _standard_. You may want to override here as well.
+* Operations Documents/Sharing Files.md - This provides a fairly straightforward way to use Google Drive, but your mileage may vary here
+* Operations Documents/Sourcing Candidates.md - This contains a set of specific organizationts Clef works with to source candidates. If this is your list too, great! If not, you'll want to override.
 
-## Onboarding Documents
-* [Welcome to Clef](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/Welcome%20to%20Clef.md)
-* [Direct Reports](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/Direct%20Reports.md)
-* [Internal Transparency](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/Internal%20Transparency.md)
-* [Objectives and Key Results](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/Objectives%20and%20Key%20Results.md)
-* [One on Ones](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/One%20on%20Ones.md)
-* [Product Manifesto](https://github.com/clef/handbook/blob/master/Onboarding%20Documents/Product%20Manifesto.md)
-
-## Operations Documents
-* [Sourcing Candidates](https://github.com/clef/handbook/blob/master/Operations%20Documents/Sourcing%20Candidates.md)
-* [Interview Process](https://github.com/clef/handbook/blob/master/Operations%20Documents/Interview%20Process.md)
-* [Budgeting](https://github.com/clef/handbook/blob/master/Operations%20Documents/Budgeting.md)
-* [Hack Weeks](https://github.com/clef/handbook/blob/master/Operations%20Documents/Hack%20Weeks.md)
-* [Onboarding](https://github.com/clef/handbook/blob/master/Operations%20Documents/Onboarding.md)
-* [Sharing Files](https://github.com/clef/handbook/blob/master/Operations%20Documents/Sharing%20Files.md)
-
-## Benefits and Perks
-* [Health Care and Disability Insurance](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Healthcare%20and%20Disability%20Insurance.md)
-* [Vacation and Sick Leave](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Vacation%20and%20Sick%20Leave.md)
-* [Holiday List](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Holiday%20List.md)
-* [Referral Bonuses](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Referral%20Bonuses.md)
-* [Continuing Education](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Continuing%20Education.md)
-* [Sabbatical](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Sabbatical.md)
-* [New Parent Leave](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/New%20Parent%20Leave.md)
-* [Other Protected Absences](https://github.com/clef/handbook/blob/master/Benefits%20and%20Perks/Other%20Protected%20Absences.md)
-
-
-
-# Acknowledgements
-
-We hope that many more people will suggest ways for us to improve these policies, and the first version would not have been possible without the thoughtful input from these great folks.
-
-* [Angel Lewis](http://www.allemployerlaw.com/)
-* [Ashe Dryden](http://www.ashedryden.com/)
-* [B](https://twitter.com/brennenbyrne)
-* [Mark Hudnall](https://twitter.com/landakram)
-* [Jesse Pollak](https://twitter.com/jessepollak)
-* [Darrell Jones](https://twitter.com/darrelljonesiii)
-* [Grace Wong](https://twitter.com/gwongz)
-* [Julie Horvath](https://twitter.com/nrrrdcore)
-* [Ikka Riley](https://twitter.com/isicalynn)
-* [Erica Baker](https://twitter.com/ericajoy)
