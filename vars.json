@@ -16,7 +16,9 @@
   "ceo_twitter_handle": "brennenbyrne",
   "ceo_email": "b@getclef.com",
   "founders": "Mark, Jesse, or B",
+  "num_founders": "three",
   "reporting_structure": "the founder to whom the employee reports",
+  "reporting_structure_3rd_person": "the founder they report to",
   "reporting_structure_personal": "the founder to whom you report",
 
   "salary_more_than_5_technical": "$120k",
