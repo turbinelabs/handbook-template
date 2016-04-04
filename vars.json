@@ -1,5 +1,6 @@
 {
   "company_name": "Clef",
+  "company_name_possessive": "Clef's",
   "company_full_name": "Clef, Inc.",
   "company_full_name_upper": "CLEF, INC.",
   "company_domain": "getclef.com",
@@ -15,6 +16,8 @@
   "ceo_twitter_handle": "brennenbyrne",
   "ceo_email": "b@getclef.com",
   "founders": "Mark, Jesse, or B",
+  "reporting_structure": "the founder to whom the employee reports",
+  "reporting_structure_personal": "the founder to whom you report",
 
   "salary_more_than_5_technical": "$120k",
   "salary_less_than_5_technical": "$100k",

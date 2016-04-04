@@ -12,7 +12,7 @@ At the base of every member of the {{.company_name}} team’s directory, there s
 
 4. **Resources** -- common resources which will be shared across projects -- like logo design resources, press clippings, etc.
 
-5. **OKRs** -- everyone at {{.company_name}}’s objectives and key results.
+5. **OKRs** -- everyone at {{.company_name_possessive}} objectives and key results.
 
 6. **[Your Name]** -- every employee should have their personnel folder in the root directory with contracts, offer letters, etc. inside (shared only with you)
 

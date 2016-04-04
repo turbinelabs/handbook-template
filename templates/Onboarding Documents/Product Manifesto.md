@@ -10,7 +10,7 @@ Working on {{.company_name}}, it is tempting to optimize for some of the metrics
 
 * The number of taps between each login
 
-For the first two years of {{.company_name}}’s existence, we often found ourselves following our guts in the wrong direction on each of these metrics but were unable to articulate why. We looked at other solutions that out-performed us in each of these categories and worried about whether we were overlooking optimizations that would make {{.company_name}} a better product. We kept making decisions that felt right, but weren’t backed up by the core metrics we "should" have been measuring.
+For the first two years of {{.company_name_possessive}} existence, we often found ourselves following our guts in the wrong direction on each of these metrics but were unable to articulate why. We looked at other solutions that out-performed us in each of these categories and worried about whether we were overlooking optimizations that would make {{.company_name}} a better product. We kept making decisions that felt right, but weren’t backed up by the core metrics we "should" have been measuring.
 
 Even as we seemed to be working in the wrong direction, people were choosing {{.company_name}} over the other options and connecting with it in a way that was radically different. We discovered that while people *used* other options, they *loved* using {{.company_name}}.
 

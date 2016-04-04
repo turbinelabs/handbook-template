@@ -1,6 +1,6 @@
 #Objectives and Key Results
 
-Objectives and Key Results (OKRs) is a method for defining and keeping track of goals and their outcomes. They organize our goals by breaking them into high-level aspirations (objectives) and the measurable results that determine whether or not we’ve reached them (key results). OKRs are set at the company and individual level to help everyone see how their personal goals align with {{.company_name}}’s goals, and also see how other people in the organization are working for the same outcomes from a different perspective.
+Objectives and Key Results (OKRs) is a method for defining and keeping track of goals and their outcomes. They organize our goals by breaking them into high-level aspirations (objectives) and the measurable results that determine whether or not we’ve reached them (key results). OKRs are set at the company and individual level to help everyone see how their personal goals align with {{.company_name_possessive}} goals, and also see how other people in the organization are working for the same outcomes from a different perspective.
 
 ## Examples
 

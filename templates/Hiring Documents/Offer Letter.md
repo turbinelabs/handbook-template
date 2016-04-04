@@ -2,7 +2,7 @@ Welcome to {{.company_name}}, **FIRST_NAME**!
 
 We are excited to extend an official offer for you to join the {{.company_name}} team as **a/the TITLE**. This offer letter will go over the basics of working at {{.company_name}}, but there are a lot more details in our [Employee Handbook]({{.handbook_github_repo}}). If you have any questions that aren’t in this letter or the handbook, please let me know.
 
-In our conversation, you said you wanted to take the **EQUITY/SALARY** heavy offer, so your starting salary will be **SALARY** per year and you will be recommended for an option to purchase **SHARES** shares of {{.company_name}}’s common stock. There are **OUTSTANDING SHARES** shares of {{.company_name}} common stock outstanding, and your shares will vest over {{.equity_vest_years}} years, with a {{.equity_vest_cliff}} cliff.
+In our conversation, you said you wanted to take the **EQUITY/SALARY** heavy offer, so your starting salary will be **SALARY** per year and you will be recommended for an option to purchase **SHARES** shares of {{.company_name_possessive}} common stock. There are **OUTSTANDING SHARES** shares of {{.company_name}} common stock outstanding, and your shares will vest over {{.equity_vest_years}} years, with a {{.equity_vest_cliff}} cliff.
 
 Equity at startups is complicated, so we’ve created a [Guide to Your Equity]({{.handbook_github_repo}}/blob/master/Hiring%20Documents/Guide%20to%20Your%20Equity.md) that explains how options are issued, exercised, and what they might be worth if {{.company_name}} is successful.
 

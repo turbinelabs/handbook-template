@@ -32,7 +32,7 @@ When {{.company_name}} raises money from outside investors, it needs to create n
 
 If we get a fair valuation for the company, then the value of your options stay the same when we raise outside money because the company’s new valuation will be equal to the old value of the company + the new capital raised. For example, if {{.company_name}} is worth $20m and we raise $5m, we are now worth $25m. If you owned 5% of $20m before, you now own 4% of $25m (we sold 20% of the company, or, said differently, diluted you by 20%). The 5% stake was worth $1m before the fundraise and the 4% stake is now worth $1m.
 
-You can also be diluted as we give equity to employees. {{.company_name}} gives stock option grants to new employees out of an option pool, or a group of options that the {{.company_name}} board of directors creates all at once. This means that you will not be diluted each time we hire a new employee, but only when we need to create a new option pool. {{.company_name}}’s current option pool is intended to cover the first 10 hires (after the three founders) before it needs to be refreshed. For some high-level executive hires, the board might approve stock option grants outside of the equity pool. In both cases, the hope is that employees add more value to the company than the equity they receive.
+You can also be diluted as we give equity to employees. {{.company_name}} gives stock option grants to new employees out of an option pool, or a group of options that the {{.company_name}} board of directors creates all at once. This means that you will not be diluted each time we hire a new employee, but only when we need to create a new option pool. {{.company_name_possessive}} current option pool is intended to cover the first 10 hires (after the three founders) before it needs to be refreshed. For some high-level executive hires, the board might approve stock option grants outside of the equity pool. In both cases, the hope is that employees add more value to the company than the equity they receive.
 
 Investor dilution won’t affect the value of your stock, but the valuation that we raise money at definitely will. Valuations (how much a company is worth) in private markets are highly unpredictable and subjective -- a share of {{.company_name}} stock is worth whatever someone will pay for it. Competition between investors, general market performance, perceived future value, and our negotiation skills all play into that valuation and the value of your options will be affected by those forces.
 
@@ -66,7 +66,7 @@ This changes if you exercise stock less than 2 years after the grant was made be
 
 When {{.company_name}} raises outside capital, investors will buy a form of Preferred Stock that gives them special rights on top of their ownership of the business. Each subsequent round of funding will create a new class of stock with its own rights -- these are usually named by the rounds of funding (ex. Series A Preferred Stock, Series B Preferred Stock, etc.). Here are a few example rights that preferred stock may have.
 
-**Board seats:** A class of Preferred Stock may elect, independent of the other shareholders, a certain number of board seats. For instance, the Series A Preferred Stock holders may be able to elect one person to {{.company_name}}’s board of directors.
+**Board seats:** A class of Preferred Stock may elect, independent of the other shareholders, a certain number of board seats. For instance, the Series A Preferred Stock holders may be able to elect one person to {{.company_name_possessive}} board of directors.
 
 **Liquidation preferences:** In a liquidation event ({{.company_name}} is sold or goes public), investors with liquidation preferences get paid back first. These favor the investor and lower the value of the stock. They usually cascade from the later rounds backwards, and can be a multiple of the money raised. For instance, if our Series A investors invested $5m with a 2x liquidation preference and {{.company_name}} was bought, then $10m would go back to the Series A investors before anyone else got any money back. If {{.company_name}} was sold for $10m or less, that would mean that everyone with common stock (founders and employees) would get nothing. If {{.company_name}} sold for $15m, then $5m would be distributed among the common stockholders.
 
@@ -78,10 +78,10 @@ A convertible note is a popular way for startups to raise money because it lets 
 
 The discount is a fixed percentage (20% for {{.company_name}}) that the investors will get when the debt is converted into equity. The cap is a maximum valuation that the first investors will have to pay for the stock.  The debt converts to stock at whichever is lower: 80% of the price of the next round or the valuation cap.
 
-For {{.company_name}}’s fundraise:
+For {{.company_name_possessive}} fundraise:
 
 $175,000 was raised on notes with a cap of $5m
 
 $1,683,555 was raised on notes with a cap of $6m
 
-Anyone is always welcome to ask {{.ceo_name}}, our CEO, any questions they have about their options, {{.company_name}}’s fundraising, or anything else related to equity at {{.company_name}}. However, everyone should also consult a lawyer before making important financial decisions, especially regarding their equity because there are complex legal and tax requirements that may apply.
+Anyone is always welcome to ask {{.ceo_name}}, our CEO, any questions they have about their options, {{.company_name_possessive}} fundraising, or anything else related to equity at {{.company_name}}. However, everyone should also consult a lawyer before making important financial decisions, especially regarding their equity because there are complex legal and tax requirements that may apply.

@@ -4,6 +4,6 @@ Taking time off and recharging is critical to doing your best work at {{.company
 
 Employees also accrue 1 hour of sick leave for every 30 hours of work, but cannot accrue more than 5 days of sick leave.
 
-Employees should report vacation and sick days to the founder they report to, who will mark it in the payroll system (which keeps track of accrued days and should include them on every pay stub).
+Employees should report vacation and sick days to {{.reporting_structure}}, who will mark it in the payroll system (which keeps track of accrued days and should include them on every pay stub).
 
-Employees with chronic or terminal illnesses should talk with the founder they report to about their needs for remote work, flexible time, disability leave and/or other support.
+Employees with chronic or terminal illnesses should talk with {{.reporting_structure}} about their needs for remote work, flexible time, disability leave and/or other support.
