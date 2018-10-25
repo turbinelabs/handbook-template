@@ -1,5 +1,8 @@
 # Handbook Generator
 
+**This project is no longer maintained by Turbine Labs, which has
+[shut down](https://blog.turbinelabs.io/turbine-labs-is-shutting-down-and-our-team-is-joining-slack-2ad41554920c).**
+
 This tool is designed to templatize the Clef employee handbook, allowing other companies to use it as a reasonable starting point without excessive amounts of s/Clef/company name/. The goals in development were to
 
 * enable a smooth migration of the template system back into the Clef handbook github repo
